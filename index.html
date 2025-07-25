@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Criketgame</title>
+</head>
+<body>
+    <h1>Welcome to the Cricket Game!</h1>
+    <button onclick="
+    let Userchoice = 'bat'
+    let Computerchoice = Math.random() * 3;
+    if(Computerchoice >0 && Computerchoice <= 1){
+        Computerchoice = 'bat';     
+    } else if(Computerchoice > 1 && Computerchoice <= 2){
+        Computerchoice = 'bowl';
+    } else {
+        Computerchoice = 'stump';
+    }
+
+    let resultMsg;
+    if(Computerchoice === 'bowl'){
+       resultMsg = 'user won';
+    }
+    else if(Computerchoice === 'bat'){
+       resultMsg = 'Its tie';
+    }
+    else if (Computerchoice === 'stump') {
+       resultMsg = 'Computer won';
+    }
+alert(`You have chosen Bat. Computer choise is ${Computerchoice}. Result: ${resultMsg}`);
+    ">Bat</button>
+
+    <button onclick="
+      Userchoice = 'bowl';
+     Computerchoice = Math.random() * 3;
+    if(Computerchoice >0 && Computerchoice <= 1){
+        Computerchoice = 'bat';     
+    } else if(Computerchoice > 1 && Computerchoice <= 2){
+        Computerchoice = 'bowl';
+    } else {
+        Computerchoice = 'stump';
+    }
+
+     resultMsg;
+    if(Computerchoice === 'bowl'){
+       resultMsg = 'Its tie';
+    }
+    else if(Computerchoice === 'bat'){
+       resultMsg = 'Computer';
+    }
+    else if (Computerchoice === 'stump') {
+       resultMsg = 'User won';
+    }
+alert(`You have chosen Bowl. Computer choise is ${Computerchoice}. Result: ${resultMsg}`);
+    ">Bowl</button>
+    <button onclick="startGame()">Stump</button>
+</body>
+</html>
