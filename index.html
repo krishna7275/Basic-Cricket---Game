@@ -7,14 +7,7 @@
     <h1>Welcome to the Cricket Game!</h1>
     <button onclick="
     let Userchoice = 'bat'
-    let Computerchoice = Math.random() * 3;
-    if( Computerchoice <= 1){
-        Computerchoice = 'bat';     
-    } else if( Computerchoice <= 2){
-        Computerchoice = 'bowl';
-    } else {
-        Computerchoice = 'stump';
-    }
+     getComputerChoice();
 
     let resultMsg;
     if(Computerchoice === 'bowl'){
@@ -31,14 +24,7 @@ alert(`You have chosen Bat. Computer choise is ${Computerchoice}. Result: ${resu
 
     <button onclick="
       Userchoice = 'bowl';
-     Computerchoice = Math.random() * 3;
-    if( Computerchoice <= 1){
-        Computerchoice = 'bat';     
-    } else if(Computerchoice <= 2){
-        Computerchoice = 'bowl';
-    } else {
-        Computerchoice = 'stump';
-    }
+        getComputerChoice();
 
     let resultMsg;
     if(Computerchoice === 'bowl'){
@@ -55,15 +41,7 @@ alert(`You have chosen Bowl. Computer choise is ${Computerchoice}. Result: ${res
 
     <button onclick="
       Userchoice = 'Stump';
-     Computerchoice = Math.random() * 3;
-    if( Computerchoice <= 1){
-        Computerchoice = 'bat';     
-    } else if(Computerchoice <= 2){
-        Computerchoice = 'bowl';
-    } else {
-        Computerchoice = 'stump';
-    }
-
+      getComputerChoice();
     let resultMsg;
     if(Computerchoice === 'bowl'){
        resultMsg = 'Computer won';
@@ -74,7 +52,22 @@ alert(`You have chosen Bowl. Computer choise is ${Computerchoice}. Result: ${res
     else if (Computerchoice === 'stump') {
        resultMsg = 'its tie';
     }
-alert(`You have chosen Bowl. Computer choise is ${Computerchoice}. Result: ${resultMsg}`);
+alert(`You have chosen Stump. Computer choise is ${Computerchoice}. Result: ${resultMsg}`);
     ">Stump</button>
+
+
+   <script> 
+    let Computerchoice;
+    function getComputerChoice() {
+        let randomNUmber = Math.random() * 3;
+    if(  randomNUmber > 0 && randomNUmber <= 1){
+        Computerchoice = 'bat';     
+    } else if(  randomNUmber > 1 &&  randomNUmber <= 2){
+        Computerchoice = 'bowl';
+    } else {
+        Computerchoice = 'stump';
+    }
+    }
+   </script>
 </body>
 </html>
