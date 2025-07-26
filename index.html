@@ -40,18 +40,41 @@ alert(`You have chosen Bat. Computer choise is ${Computerchoice}. Result: ${resu
         Computerchoice = 'stump';
     }
 
-     resultMsg;
+    let resultMsg;
     if(Computerchoice === 'bowl'){
        resultMsg = 'Its tie';
     }
     else if(Computerchoice === 'bat'){
-       resultMsg = 'Computer';
+       resultMsg = 'Computer won';
     }
     else if (Computerchoice === 'stump') {
        resultMsg = 'User won';
     }
 alert(`You have chosen Bowl. Computer choise is ${Computerchoice}. Result: ${resultMsg}`);
     ">Bowl</button>
-    <button onclick="startGame()">Stump</button>
+
+    <button onclick="
+      Userchoice = 'Stump';
+     Computerchoice = Math.random() * 3;
+    if(Computerchoice >0 && Computerchoice <= 1){
+        Computerchoice = 'bat';     
+    } else if(Computerchoice > 1 && Computerchoice <= 2){
+        Computerchoice = 'bowl';
+    } else {
+        Computerchoice = 'stump';
+    }
+
+    let resultMsg;
+    if(Computerchoice === 'bowl'){
+       resultMsg = 'Computer won';
+    }
+    else if(Computerchoice === 'bat'){
+       resultMsg = 'User won';
+    }
+    else if (Computerchoice === 'stump') {
+       resultMsg = 'its tie';
+    }
+alert(`You have chosen Bowl. Computer choise is ${Computerchoice}. Result: ${resultMsg}`);
+    ">Stump</button>
 </body>
 </html>
