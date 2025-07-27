@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+}
+
+.choice-button {
+  height: 100px;
+  width: 100px;
+  border: none;
+  margin: 10px;
+  background-color: rgb(23, 226, 205);
+  border-radius: 30px;
+  cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choice-image {
+  height: 75px;
+}
+
+#res {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ #res:hover {
+    background-color: #dc0c0c;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.choice-button:hover {
+    background-color: #ffc400;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
